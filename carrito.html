@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrito</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
 
+<body>
+
+<header>
+<h1>Carrito de compras</h1>
+<a href="index.html">Volver a la tienda</a>
+</header>
+
+<div id="lista"></div>
+
+<script>
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let lista = document.getElementById("lista");
+
+let total = 0;
+
+carrito.forEach(p=>{
+lista.innerHTML += "<p>"+p.nombre+" - $"+p.precio+"</p>";
+total += p.precio;
+});
+
+lista.innerHTML += "<h2>Total: $"+total+"</h2>";
+
+</script>
+
+</body>
+</html>
