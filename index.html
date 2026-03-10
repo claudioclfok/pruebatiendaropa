@@ -4,33 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tienda Online</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    .producto { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
-    .productos { max-width: 400px; margin: auto; }
-    button { padding: 5px 10px; cursor: pointer; }
-  </style>
 </head>
 <body>
 
-  <h1>Mi Tienda Online</h1>
+<h1>Mi Tienda Online</h1>
 
-  <section class="productos">
+<div>
+  <h2>Campera Oversize</h2>
+  <p>Precio: $85.000</p>
+  <button onclick="agregarCarrito(1,'Campera Oversize',85000); cargarCarrito();">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
-      <h2>Campera Oversize</h2>
-      <p>Precio: $85.000</p>
-      <button onclick="agregarCarrito(1,'Campera Oversize',85000)">Agregar al carrito</button>
-    </div>
+<div>
+  <h2>Vestido Minimal</h2>
+  <p>Precio: $72.000</p>
+  <button onclick="agregarCarrito(2,'Vestido Minimal',72000); cargarCarrito();">Agregar al carrito</button>
+</div>
 
-    <div class="producto">
-      <h2>Vestido Minimal</h2>
-      <p>Precio: $72.000</p>
-      <button onclick="agregarCarrito(2,'Vestido Minimal',72000)">Agregar al carrito</button>
-    </div>
+<div>
+  <h2>Blazer Urbano</h2>
+  <p>Precio: $92.000</p>
+  <button onclick="agregarCarrito(3,'Blazer Urbano',92000); cargarCarrito();">Agregar al carrito</button>
+</div>
 
-  </section>
+<h2>Carrito</h2>
+<div id="carrito"></div>
+<p>Total: $<span id="total">0</span></p>
+<button onclick="pagar()">Pagar</button>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+  cargarCarrito();
+</script>
+
 </body>
 </html>
