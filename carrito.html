@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <title>Carrito</title>
 <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body>
+<body onload="cargarCarrito()">
 
 <header>
-<h1>Carrito de compras</h1>
-<a href="index.html">Volver a la tienda</a>
+<h1>Thalia GAF</h1>
 </header>
 
-<div id="lista"></div>
+<h2 style="text-align:center;">Tu carrito</h2>
 
-<script>
+<div id="carrito" style="padding:40px;"></div>
 
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-let lista = document.getElementById("lista");
+<h2 style="text-align:center;">
+Total: $<span id="total">0</span>
+</h2>
 
-let total = 0;
+<div style="text-align:center;margin-top:30px;">
+<button onclick="pagar()">Finalizar compra</button>
+</div>
 
-carrito.forEach(p=>{
-lista.innerHTML += "<p>"+p.nombre+" - $"+p.precio+"</p>";
-total += p.precio;
-});
-
-lista.innerHTML += "<h2>Total: $"+total+"</h2>";
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
