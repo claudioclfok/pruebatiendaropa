@@ -1,64 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<title>Thalia GAF</title>
-<link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .producto { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    .productos { max-width: 400px; margin: auto; }
+    button { padding: 5px 10px; cursor: pointer; }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>Thalia GAF</h1>
+  <h1>Mi Tienda Online</h1>
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="#coleccion">Colección</a>
-<a href="carrito.html">Carrito</a>
-</nav>
-</header>
+  <section class="productos">
 
-<section class="hero">
-<h2>Nueva colección</h2>
-<p>Piezas únicas</p>
-</section>
+    <div class="producto">
+      <h2>Campera Oversize</h2>
+      <p>Precio: $85.000</p>
+      <button onclick="agregarCarrito(1,'Campera Oversize',85000)">Agregar al carrito</button>
+    </div>
 
-<section class="productos">
+    <div class="producto">
+      <h2>Vestido Minimal</h2>
+      <p>Precio: $72.000</p>
+      <button onclick="agregarCarrito(2,'Vestido Minimal',72000)">Agregar al carrito</button>
+    </div>
 
-<div class="producto">
-<a href="producto.html?id=1">
-<img src="producto1.jpg">
-</a>
-<h3>Campera Oversize</h3>
-<p>$85000</p>
-<p>3 cuotas</p>
-<button onclick="agregarCarrito(1,'Campera Oversize',85000)">Agregar al carrito</button>
-</div>
+  </section>
 
-<div class="producto">
-<a href="producto.html?id=2">
-<img src="producto2.jpg">
-</a>
-<h3>Vestido Minimal</h3>
-<p>$72000</p>
-<p>3 cuotas</p>
-<button onclick="agregarCarrito(2,'Vestido Minimal',72000)">Agregar al carrito</button>
-</div>
-
-<div class="producto">
-<a href="producto.html?id=3">
-<img src="producto3.jpg">
-</a>
-<h3>Blazer Urbano</h3>
-<p>$92000</p>
-<p>3 cuotas</p>
-<button onclick="agregarCarrito(3,'Blazer Urbano',92000)">Agregar al carrito</button>
-</div>
-
-</section>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
