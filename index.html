@@ -1,41 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Online</title>
+<meta charset="UTF-8">
+<title>Tienda de Ropa</title>
+<link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-<h1>Mi Tienda Online</h1>
+<header>
+<h1>CLF STUDIO</h1>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#coleccion">Colección</a>
+<a href="carrito.html">Carrito</a>
+</nav>
+</header>
 
-<div>
-  <h2>Campera Oversize</h2>
-  <p>Precio: $85.000</p>
-  <button onclick="agregarCarrito(1,'Campera Oversize',85000); cargarCarrito();">Agregar al carrito</button>
+<section class="hero">
+<h2>Nueva Colección</h2>
+<p>Piezas únicas de diseño</p>
+</section>
+
+<section id="coleccion" class="productos">
+
+<div class="producto">
+<a href="producto.html?id=1">
+<img src="img/producto1.jpg">
+</a>
+<h3>Campera Oversize</h3>
+<p>$85.000</p>
+<p>3 cuotas sin interés</p>
+<button onclick="agregarCarrito(1,'Campera Oversize',85000)">Agregar al carrito</button>
 </div>
 
-<div>
-  <h2>Vestido Minimal</h2>
-  <p>Precio: $72.000</p>
-  <button onclick="agregarCarrito(2,'Vestido Minimal',72000); cargarCarrito();">Agregar al carrito</button>
+<div class="producto">
+<a href="producto.html?id=2">
+<img src="img/producto2.jpg">
+</a>
+<h3>Vestido Minimal</h3>
+<p>$72.000</p>
+<p>3 cuotas sin interés</p>
+<button onclick="agregarCarrito(2,'Vestido Minimal',72000)">Agregar al carrito</button>
 </div>
 
-<div>
-  <h2>Blazer Urbano</h2>
-  <p>Precio: $92.000</p>
-  <button onclick="agregarCarrito(3,'Blazer Urbano',92000); cargarCarrito();">Agregar al carrito</button>
+<div class="producto">
+<a href="producto.html?id=3">
+<img src="img/producto3.jpg">
+</a>
+<h3>Blazer Premium</h3>
+<p>$95.000</p>
+<p>6 cuotas</p>
+<button onclick="agregarCarrito(3,'Blazer Premium',95000)">Agregar al carrito</button>
 </div>
 
-<h2>Carrito</h2>
-<div id="carrito"></div>
-<p>Total: $<span id="total">0</span></p>
-<button onclick="pagar()">Pagar</button>
+</section>
+
+<section class="comprar">
+<h2>¿Cómo comprar?</h2>
+<p>1. Elegí el producto</p>
+<p>2. Agregalo al carrito</p>
+<p>3. Pagá con tarjeta o transferencia</p>
+<p>4. Recibí tu pedido en tu casa</p>
+</section>
 
 <script src="script.js"></script>
-<script>
-  cargarCarrito();
-</script>
 
 </body>
 </html>
