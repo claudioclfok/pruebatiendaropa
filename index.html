@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Pruebe tienda ropa</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
 
+<body>
+
+<header>
+<h1>Pruebe tienda ropa</h1>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="#coleccion">Colección</a>
+<a href="carrito.html">Carrito</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Nueva Colección</h2>
+<p>Piezas únicas</p>
+</section>
+
+<section id="coleccion" class="productos">
+
+<div class="producto">
+<a href="producto.html?id=1">
+<img src="img/producto1.jpg">
+</a>
+<h3>Campera Oversize</h3>
+<p>$85000</p>
+<p>3 cuotas</p>
+<button onclick="agregarCarrito(1,'Campera Oversize',85000)">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+<a href="producto.html?id=2">
+<img src="img/producto2.jpg">
+</a>
+<h3>Vestido Minimal</h3>
+<p>$72000</p>
+<p>3 cuotas</p>
+<button onclick="agregarCarrito(2,'Vestido Minimal',72000)">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+<a href="producto.html?id=3">
+<img src="img/producto3.jpg">
+</a>
+<h3>Blazer Premium</h3>
+<p>$95000</p>
+<p>6 cuotas</p>
+<button onclick="agregarCarrito(3,'Blazer Premium',95000)">Agregar al carrito</button>
+</div>
+
+</section>
+
+<section class="comprar">
+<h2>Cómo comprar</h2>
+<p>1 Elegí un producto</p>
+<p>2 Agregalo al carrito</p>
+<p>3 Revisá el carrito</p>
+<p>4 Pagá con transferencia o tarjeta</p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
