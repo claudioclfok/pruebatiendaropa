@@ -25,9 +25,9 @@ function cargarCarrito() {
 }
 
 function eliminarProducto(index) {
-  carrito.splice(index, 1); // elimina el producto seleccionado
+  carrito.splice(index, 1);
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  cargarCarrito(); // recarga el carrito actualizado
+  cargarCarrito();
 }
 
 function pagar() {
